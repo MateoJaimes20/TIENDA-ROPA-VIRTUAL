@@ -3,15 +3,10 @@
 @section('tittle','Login')
 
 @section('content')
-<div class="login-box">
-  <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
-    <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Grove</b>Street</a>
-    </div>
+<div class="login-box" style="color:">
+  <div class="card card-outline card-dark">
     <div class="card-body">
       <p class="login-box-msg">Iniciar Sesion</p>
-
       <form method="POST" action="{{ route('login') }}">
       @csrf
         <div class="input-group mb-3">
@@ -31,14 +26,11 @@
                 </div>
         </div>
         <div class="row">
-          
-          <!-- /.col -->
+          <div class="col-6" >
+            <button type="submit" class="btn btn-dark btn-block">Ingresar</button>
+          </div> 
           <div class="col-6">
-            <button type="submit" class="btn btn-primary btn-block">ingresar</button>
-          </div>
-          
-          <div class="col-6">
-            <a href="{{route('register')}}" class="btn btn-primary btn-block">Registrar</a>
+            <a href="{{route('register')}}" class="btn btn-outline-dark btn-block">Registrar</a>
           </div>
         </div>
         <br>
@@ -53,16 +45,8 @@
                 </p>
             </div>
         </div>
-     
-
-
-      </form>
-
-      
-      
+      </form> 
     </div>
-    <!-- /.card-body -->
   </div>
-  <!-- /.card -->
 </div>
 @endsection

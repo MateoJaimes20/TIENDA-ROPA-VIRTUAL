@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="shortcut icon" href="" type="favicon/ico">-->
+
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('tittle')</title>
+
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -19,14 +22,20 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css')}}">
 
+    <style>
+        body {
+            background-image: url('/backend/dist/img/bronx.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
     @stack('css')
-    <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-    <body class="hold-transition login-page">
-        @yield('content')
-        
-    </body>
+<body class="hold-transition login-page">
+    @yield('content') 
+</body>
 
 <!-- jQuery -->
 <script src="{{asset('backend/plugins/jquery/jquery.min.js')}}"></script>
